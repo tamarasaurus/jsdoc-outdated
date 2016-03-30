@@ -21,10 +21,10 @@ fs.readFile(filePath, 'utf8', function(err, contents) {
     const comparison = argsMatchDocs(block);
     const details = `${block.line}:${block.codeStart}`;
     const isBlockModule = isModule(block);
-
-    if(isBlockModule) return;
-
     const functionName = getFunctionName(block);
+
+    if(isBlockModule || !functionName) return;
+
 
     if(comparison.matches) {
       console.log(`${functionName} (${details}) looks good ✓`.green);
@@ -64,7 +64,8 @@ function getOutdatedArgs(docArgs) {
 }
 
 function getFunctionName(block) {
-  return block.ctx.name;
+  if(block.ctx) return block.ctx.name;
+  return false;
 }
 
 function getCodeArgs(code) {
