@@ -1,0 +1,31 @@
+{
+  "name": "jsdoc-outdated",
+  "version": "1.0.0",
+  "description": "Tells you when your js documentation is outdated",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamarasaurus/jsdoc-outdated.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "outdated"
+  ],
+  "author": "Tamara Chahine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tamarasaurus/jsdoc-outdated/issues"
+  },
+  "homepage": "https://github.com/tamarasaurus/jsdoc-outdated#readme",
+  "devDependencies": {
+    "dox": "^0.8.1"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "function-arguments": "^1.0.4",
+    "lodash": "^4.6.1"
+  }
+}
